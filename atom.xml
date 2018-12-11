@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="https://dashage.github.io/"/>
   <updated>2018-12-11T06:09:53.023Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>https://dashage.github.io/</id>
   
   <author>
     <name>秦风</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2018/12/11/hello-world/"/>
-    <id>http://yoursite.com/2018/12/11/hello-world/</id>
+    <link href="https://dashage.github.io/2018/12/11/hello-world/"/>
+    <id>https://dashage.github.io/2018/12/11/hello-world/</id>
     <published>2018-12-11T06:09:53.023Z</published>
     <updated>2018-12-11T06:09:53.023Z</updated>
     
