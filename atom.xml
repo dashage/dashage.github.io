@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://dashage.github.io/"/>
-  <updated>2018-12-22T14:19:29.615Z</updated>
+  <updated>2018-12-23T13:44:39.050Z</updated>
   <id>https://dashage.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java Web学习路线图</title>
+    <link href="https://dashage.github.io/2018/12/23/Java%20Web%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF%E5%9B%BE/"/>
+    <id>https://dashage.github.io/2018/12/23/Java Web学习路线图/</id>
+    <published>2018-12-23T13:44:39.050Z</published>
+    <updated>2018-12-23T13:44:39.050Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Java-Web"><a href="#Java-Web" class="headerlink" title="Java Web"></a>Java Web</h1><h2 id="第一阶段：前端开发阶段"><a href="#第一阶段：前端开发阶段" class="headerlink" title="第一阶段：前端开发阶段"></a>第一阶段：前端开发阶段</h2><ul><li><p>HTML</p></li><li><p>CSS</p></li><li><p>JavaScript</p></li><li><p>BootStrap</p></li><li><p>jQuery</p></li></ul><h2 id="第二阶段：数据库"><a href="#第二阶段：数据库" class="headerlink" title="第二阶段：数据库"></a>第二阶段：数据库</h2><ul><li><p>MYSQL 加强</p></li><li><p>JDBC 加强</p></li></ul><h2 id="第三阶段：服务器端开发"><a href="#第三阶段：服务器端开发" class="headerlink" title="第三阶段：服务器端开发"></a>第三阶段：服务器端开发</h2><ul><li><p>Web 核心技术：servlet</p></li><li><p>Web 核心技术：request&amp;response</p></li><li><p>JSP&amp;EL </p></li><li><p>Web 核心技术：cookie &amp; session</p></li><li><p>XML&amp;Tomcat</p></li></ul><h2 id="第四阶段：数据库高级开发"><a href="#第四阶段：数据库高级开发" class="headerlink" title="第四阶段：数据库高级开发"></a>第四阶段：数据库高级开发</h2><ul><li><p>事务操作</p></li><li><p>分页的操作</p></li></ul><h2 id="第五阶段：服务器高级开发"><a href="#第五阶段：服务器高级开发" class="headerlink" title="第五阶段：服务器高级开发"></a>第五阶段：服务器高级开发</h2><ul><li><p>过滤器和监听器</p></li><li><p>ajax&amp;Jquery的ajax</p></li><li><p>基础知识加强</p></li></ul><h2 id="第六阶段：综合案例"><a href="#第六阶段：综合案例" class="headerlink" title="第六阶段：综合案例"></a>第六阶段：综合案例</h2>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Java-Web&quot;&gt;&lt;a href=&quot;#Java-Web&quot; class=&quot;headerlink&quot; title=&quot;Java Web&quot;&gt;&lt;/a&gt;Java Web&lt;/h1&gt;&lt;h2 id=&quot;第一阶段：前端开发阶段&quot;&gt;&lt;a href=&quot;#第一阶段：前端开发阶段&quot; class
+      
+    
+    </summary>
+    
+      <category term="编程语言" scheme="https://dashage.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    
+    
+      <category term="Java" scheme="https://dashage.github.io/tags/Java/"/>
+    
+  </entry>
   
   <entry>
     <title>日本五十音</title>
