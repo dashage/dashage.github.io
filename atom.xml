@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://dashage.github.io/"/>
-  <updated>2018-12-28T05:04:03.180Z</updated>
+  <updated>2018-12-30T10:32:34.610Z</updated>
   <id>https://dashage.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Redmi 5A global 刷机</title>
+    <link href="https://dashage.github.io/2018/12/30/Redmi%205A%20global%20%E5%88%B7%E6%9C%BA/"/>
+    <id>https://dashage.github.io/2018/12/30/Redmi 5A global 刷机/</id>
+    <published>2018-12-30T10:32:34.610Z</published>
+    <updated>2018-12-30T10:32:34.610Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Redmi-5A-global-刷机"><a href="#Redmi-5A-global-刷机" class="headerlink" title="Redmi 5A global 刷机"></a>Redmi 5A global 刷机</h1><p>对我来讲，小米手机 Global 版本相较于 China 版本有以下优点</p><ul><li>移除一些系统软件（自带浏览器、小米视频、小米音乐除外）</li><li>Google 软件原生支持</li></ul><p>刷机过程如下</p><h2 id="解锁手机"><a href="#解锁手机" class="headerlink" title="解锁手机"></a>解锁手机</h2><h2 id="下载-ROM"><a href="#下载-ROM" class="headerlink" title="下载 ROM"></a>下载 ROM</h2><h2 id="下载-platform-tools"><a href="#下载-platform-tools" class="headerlink" title="下载 platform-tools"></a>下载 platform-tools</h2><h2 id="刷机以及完成"><a href="#刷机以及完成" class="headerlink" title="刷机以及完成"></a>刷机以及完成</h2><p>### </p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Redmi-5A-global-刷机&quot;&gt;&lt;a href=&quot;#Redmi-5A-global-刷机&quot; class=&quot;headerlink&quot; title=&quot;Redmi 5A global 刷机&quot;&gt;&lt;/a&gt;Redmi 5A global 刷机&lt;/h1&gt;&lt;p&gt;对我来讲，小
+      
+    
+    </summary>
+    
+      <category term="刷机" scheme="https://dashage.github.io/categories/%E5%88%B7%E6%9C%BA/"/>
+    
+    
+      <category term="Linux" scheme="https://dashage.github.io/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>CentoS6中文乱码</title>
