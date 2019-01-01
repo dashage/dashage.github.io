@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="个人的问题清单">
 <meta property="og:description" content="C++ 多维数组C++ 支持多维数组。多维数据声明的一般形式如下： 1type name[size1][size2]...[sizeN]; 例如，下面的声明创建了一个三维5.10.4 整型数组: 1int threedim[5][10][4]; 二维数组 多维数组最简单的形式是二维数据，一个二维数组，在本质上，是一个一维数组的列表。申明一个 x 行 y 列的二维整型数组，形式如下: 1type a">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-01T04:40:19.749Z">
+<meta property="og:updated_time" content="2019-01-01T11:31:02.992Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++基础">
 <meta name="twitter:description" content="C++ 多维数组C++ 支持多维数组。多维数据声明的一般形式如下： 1type name[size1][size2]...[sizeN]; 例如，下面的声明创建了一个三维5.10.4 整型数组: 1int threedim[5][10][4]; 二维数组 多维数组最简单的形式是二维数据，一个二维数组，在本质上，是一个一维数组的列表。申明一个 x 行 y 列的二维整型数组，形式如下: 1type a">
@@ -455,6 +455,109 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line"></span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">class Box&#123;</span><br><span class="line">public:</span><br><span class="line">    double length;      //长度</span><br><span class="line">    double breadth;     //宽度</span><br><span class="line">    double height;      //高度</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    //成员函数申明</span><br><span class="line">    double getVolume(void);</span><br><span class="line">    void setLength( double len );</span><br><span class="line">    void setBreadth( double bre );</span><br><span class="line">    void setHeight( double hei );</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">//成员函数定义</span><br><span class="line"></span><br><span class="line">double Box::getVolume(void)&#123;</span><br><span class="line">    return length * breadth * height;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">void Box::setLength( double len )&#123;</span><br><span class="line">    length = len;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void Box::setBreadth( double bre )&#123;</span><br><span class="line">    breadth = bre;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">void Box::setHeight( double hei )&#123;</span><br><span class="line">    height = hei;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//程序的主函数</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    Box Box1;   //声明 Box1, 类型为 Box</span><br><span class="line">    Box Box2;   //声明 Box2, 类型为 Box</span><br><span class="line">    double volume = 0.0;    //用来存储体积</span><br><span class="line">    </span><br><span class="line">    // box 1 详述</span><br><span class="line">    Box1.setLength(6.0);</span><br><span class="line">    Box1.setBreadth(7.0);</span><br><span class="line">    Box1.setHeight(5.0);</span><br><span class="line">    </span><br><span class="line">    // box 2 详述</span><br><span class="line">    Box2.setLength(12.0);</span><br><span class="line">    Box2.setBreadth(13.0);</span><br><span class="line">    Box2.setHeight(10.0);</span><br><span class="line">    </span><br><span class="line">    // box 1 的体积</span><br><span class="line">    volume = Box1.getVolume();</span><br><span class="line">    cout &lt;&lt; &quot;Box1 的体积: &quot; &lt;&lt; volume &lt;&lt;endl;</span><br><span class="line">    </span><br><span class="line">    // box 2 的体积</span><br><span class="line">    volume = Box2.getVolume();</span><br><span class="line">    cout &lt;&lt; &quot;Box2 的体积: &quot; &lt;&lt; volume &lt;&lt;endl;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p>当上面的代码被编译和执行时，它会产生下列结果:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Box1 的体积: 210</span><br><span class="line">Box2 的体积: 1560</span><br></pre></td></tr></table></figure>
+<h1 id="C-变量作用域"><a href="#C-变量作用域" class="headerlink" title="C++ 变量作用域"></a>C++ 变量作用域</h1><p>作用域是程序的一个区域，一般来说有三个地方可以声明变量：</p>
+<ul>
+<li>在函数或一个代码块内部声明的变量，称为局部变量。</li>
+<li>在函数参数得定义中声明的变量，称为形式参数。</li>
+<li>在所有函数外部声明的变量，称为全局变量。</li>
+</ul>
+<p>我们将在后续的章节中学习什么是函数和参数。本章我们先来讲解声明是局部变量和全局变量。</p>
+<h2 id="局部变量"><a href="#局部变量" class="headerlink" title="局部变量"></a>局部变量</h2><p>在函数或一个代码块内部声明的变量，称为局部变量。它们只能被函数内部或者代码块内部的语句使用。下面的实例使用了局部变量：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    int a = 10, b = 20, c;</span><br><span class="line">    c = a + b;</span><br><span class="line">    cout &lt;&lt; c &lt;&lt; endl;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h2><p>在所有函数外部定义的变量（通常是在程序的头部），称为全局变量。全局变量的值在程序的整个生命周期内都是有效的。</p>
+<p>全局变量可以被任何函数访问。也就是说，全局变量一旦声明，在整个程序中都是可用的。下面的实例使用了全局变量和局部变量：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">int g;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    int a = 10, b = 20;</span><br><span class="line">    g = a + b;</span><br><span class="line">    </span><br><span class="line">    cout &lt;&lt; g &lt;&lt; endl;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>在程序中，局部变量和全局变量的名称可以相同，但是在函数内，局部变量的值会覆盖全局变量的值，下面是一个实例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">int g = 20;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    int g = 10;</span><br><span class="line">    </span><br><span class="line">    cout &lt;&lt; g &lt;&lt; endl;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>当上面的代码被编译和执行时，它会产生下列结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">10</span><br></pre></td></tr></table></figure>
+<h2 id="初始化局部变量和全局变量"><a href="#初始化局部变量和全局变量" class="headerlink" title="初始化局部变量和全局变量"></a>初始化局部变量和全局变量</h2><p>当局部变量被定义时，系统不会对其初始化，您必须自行对其初始化。定义全局变量时，系统会自动初始化为下列值：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">数据类型</th>
+<th style="text-align:center">初始化默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">int</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">char</td>
+<td style="text-align:center">‘\0’</td>
+</tr>
+<tr>
+<td style="text-align:center">float</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">double</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">pointer</td>
+<td style="text-align:center">NULL</td>
+</tr>
+</tbody>
+</table>
+<p>正确地初始化变量是一个良好的编程习惯，否则有时候程序可能会产生意想不到的结果。</p>
+<h1 id="C-指针"><a href="#C-指针" class="headerlink" title="C++ 指针"></a>C++ 指针</h1><p>学习C++ 的指针既简单又有趣。通过指针，可以简化一些C++ 编程任务的执行，还有一些任务，如动态内存分配，没有指针时无法执行的。所以，想要成为一名优秀的C++ 程序员，学习指针时很有必要的。</p>
+<p>正如您所知道的，每一个变量都有一个内存位置，每一个内存位置都定义了可使用连字号（&amp;） 运算符访问的地址，它表示了在内存中的一个地址。请看下面的实例，它将输出定义的变量地址：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line"></span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    int var1;</span><br><span class="line">    char var2[10];</span><br><span class="line">    </span><br><span class="line">    cout &lt;&lt; &quot;var1 变量的地址: &quot; &lt;&lt; &amp;var1 &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; &quot;var2 变量的地址: &quot; &lt;&lt; &amp;var2 &lt;&lt; endl;</span><br><span class="line">    </span><br><span class="line">    return 0;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>当上面的代码被编译和执行时，它会产生下列结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var1 变量的地址: 0x7ffeefbff540</span><br><span class="line">var2 变量的地址: 0x7ffeefbff56e</span><br></pre></td></tr></table></figure>
+<p>通过上面的实例，我们了解了什么是内存地址以及如何访问它。接下来让我们看看什么是指针。</p>
+<h2 id="什么是指针？"><a href="#什么是指针？" class="headerlink" title="什么是指针？"></a>什么是指针？</h2><p>指针是一个变量，其值为另一个变量的地址，即，内存位置的直接地址。就像其他变量或常量一样，您必须在使用指针存储其他变量地址之前，对其进行声明。指针变量声明的一般形式为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">type *var-name;</span><br></pre></td></tr></table></figure>
+<p>在这里，type是指针的基类型，它必须是一个有效的C++ 数据类型，var-name 是指针变量的名称。用来声明指针的星号 * 与乘法中使用的星号是相同的。但是，在这个语句中，星号是用来指定一个变量是指针。以下是有效的指针声明：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">int *ip;</span><br><span class="line">double *dp;</span><br><span class="line">float *fp;</span><br><span class="line">char *ch</span><br></pre></td></tr></table></figure>
+<p>所有指针的值得实际数据类型，不管是整型、浮点型、字符型，还是其他的数据类型，都是一样的，都是一个代表内存地址的长的十六进制数。不同数据类型的指针之间唯一的不同是，指针所指向的变量或者常量的数据类型不同。</p>
+<h2 id="C-中使用指针"><a href="#C-中使用指针" class="headerlink" title="C++ 中使用指针"></a>C++ 中使用指针</h2><p>使用指针时会频繁进行以下几个操作：定义一个指针变量、把变量地址赋值给指针、访问指针变量中可用地址的值。这些是通过使用一元运算符 * 来返回位于操作数所指定地址的变量的值。下面的实例涉及到了这些操作：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line"></span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    int var = 20;</span><br><span class="line">    int *ip;</span><br><span class="line">    </span><br><span class="line">    ip = &amp;var;</span><br><span class="line">    </span><br><span class="line">    cout &lt;&lt; &quot;Value of var variable: &quot; &lt;&lt; var &lt;&lt; endl;</span><br><span class="line">    </span><br><span class="line">    //输出在指针变量中存储的地址</span><br><span class="line">    cout &lt;&lt; &quot;Address stored in ip variable: &quot; &lt;&lt; ip &lt;&lt; endl;</span><br><span class="line">    </span><br><span class="line">    //访问指针中地址的值</span><br><span class="line">    cout &lt;&lt; &quot;Value of *ip variable: &quot; &lt;&lt; *ip &lt;&lt; endl;</span><br><span class="line">    </span><br><span class="line">    return 0;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>当上面的代码被编译和执行时，它会产生下列结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Value of var variable: 20</span><br><span class="line">Address stored in ip variable: 0x7ffeefbff548</span><br><span class="line">Value of *ip variable: 20</span><br></pre></td></tr></table></figure>
+<h2 id="C-指针详解"><a href="#C-指针详解" class="headerlink" title="C++ 指针详解"></a>C++ 指针详解</h2><p>在C++ 中，有很多指针相关的概念，这些概念都很简单，但是都很重要。下面列出了 C++ 程序员必须清楚的一些与指针相关的重要概念：</p>
+<table>
+<thead>
+<tr>
+<th>概念</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C++ Null 指针</td>
+<td>C++ 支持空指针。NUll 指针时一个定义在标准库中的值为零的常量。</td>
+</tr>
+<tr>
+<td>C++ 指针的算术运算</td>
+<td>可以对指针进行四中算数运算 ++、–、+、-</td>
+</tr>
+<tr>
+<td>C++ 指针 VS 数组</td>
+<td>指针和数组之间有着密切的关系</td>
+</tr>
+<tr>
+<td>C++ 指针数组</td>
+<td>可以定义用来存储指针的数组</td>
+</tr>
+<tr>
+<td>C++ 指向指针的指针</td>
+<td>C++ 允许指向指针的指针</td>
+</tr>
+<tr>
+<td>C++ 传递指针给函数</td>
+<td>通过引用或地址传递参数，使传递的参数在调用函数中被改动</td>
+</tr>
+<tr>
+<td>C++ 从函数返回指针</td>
+<td>C++ 允许韩式返回指针到局部变量、静态变量和动态内存分配</td>
+</tr>
+</tbody>
+</table>
+
       
     </div>
     
@@ -677,7 +780,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#C-多维数组"><span class="nav-number">1.</span> <span class="nav-text">C++ 多维数组</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C-类成员函数"><span class="nav-number">2.</span> <span class="nav-text">C++ 类成员函数</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#C-多维数组"><span class="nav-number">1.</span> <span class="nav-text">C++ 多维数组</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C-类成员函数"><span class="nav-number">2.</span> <span class="nav-text">C++ 类成员函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C-变量作用域"><span class="nav-number">3.</span> <span class="nav-text">C++ 变量作用域</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#局部变量"><span class="nav-number">3.1.</span> <span class="nav-text">局部变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#全局变量"><span class="nav-number">3.2.</span> <span class="nav-text">全局变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化局部变量和全局变量"><span class="nav-number">3.3.</span> <span class="nav-text">初始化局部变量和全局变量</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C-指针"><span class="nav-number">4.</span> <span class="nav-text">C++ 指针</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是指针？"><span class="nav-number">4.1.</span> <span class="nav-text">什么是指针？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C-中使用指针"><span class="nav-number">4.2.</span> <span class="nav-text">C++ 中使用指针</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C-指针详解"><span class="nav-number">4.3.</span> <span class="nav-text">C++ 指针详解</span></a></li></ol></li></ol></div>
             
 
           </div>
