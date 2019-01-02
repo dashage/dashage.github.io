@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://dashage.github.io/"/>
-  <updated>2019-01-01T11:37:52.242Z</updated>
+  <updated>2019-01-02T14:51:35.705Z</updated>
   <id>https://dashage.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Mac小技巧</title>
+    <link href="https://dashage.github.io/2019/01/02/Mac%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
+    <id>https://dashage.github.io/2019/01/02/Mac小技巧/</id>
+    <published>2019-01-02T14:51:35.705Z</published>
+    <updated>2019-01-02T14:51:35.705Z</updated>
+    
+    <content type="html"><![CDATA[<p>如何不间断的播放音频<br> $ mplayer -loop 0 和钉宫理惠一起学习五十音.mp3 </p><div class="row">    <embed src="https://hadoop.apache.org/docs/r1.2.1/hdfs_design.pdf" width="100%" height="550" type="application/pdf"></div>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;如何不间断的播放音频&lt;br&gt; $ mplayer -loop 0 和钉宫理惠一起学习五十音.mp3 &lt;/p&gt;
+
+
+	&lt;div class=&quot;row&quot;&gt;
+    &lt;embed src=&quot;https://hadoop.apache.org/docs/r1.2.1/hdfs_de
+      
+    
+    </summary>
+    
+      <category term="Mac" scheme="https://dashage.github.io/categories/Mac/"/>
+    
+    
+      <category term="Mac" scheme="https://dashage.github.io/tags/Mac/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux操作审计</title>
@@ -265,32 +294,6 @@
     
     
       <category term="Data V" scheme="https://dashage.github.io/tags/Data-V/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Mac小技巧</title>
-    <link href="https://dashage.github.io/2018/12/19/Mac%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
-    <id>https://dashage.github.io/2018/12/19/Mac小技巧/</id>
-    <published>2018-12-19T05:48:32.829Z</published>
-    <updated>2018-12-19T05:48:32.829Z</updated>
-    
-    <content type="html"><![CDATA[<p>如何不间断的播放音频<br> $ mplayer -loop 0 和钉宫理惠一起学习五十音.mp3 </p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;如何不间断的播放音频&lt;br&gt; $ mplayer -loop 0 和钉宫理惠一起学习五十音.mp3 &lt;/p&gt;
-
-      
-    
-    </summary>
-    
-      <category term="Mac" scheme="https://dashage.github.io/categories/Mac/"/>
-    
-    
-      <category term="Mac" scheme="https://dashage.github.io/tags/Mac/"/>
     
   </entry>
   

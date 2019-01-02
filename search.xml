@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Mac小技巧]]></title>
+    <url>%2F2019%2F01%2F02%2FMac%E5%B0%8F%E6%8A%80%E5%B7%A7%2F</url>
+    <content type="text"><![CDATA[如何不间断的播放音频 $ mplayer -loop 0 和钉宫理惠一起学习五十音.mp3]]></content>
+      <categories>
+        <category>Mac</category>
+      </categories>
+      <tags>
+        <tag>Mac</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Linux操作审计]]></title>
     <url>%2F2019%2F01%2F01%2FLinux%E6%93%8D%E4%BD%9C%E5%AE%A1%E8%AE%A1%2F</url>
     <content type="text"><![CDATA[linux 增加审计功能方法1 重新编译bashBuild Rpm 1已经验证支持, centos6,7 . Create Build User 1useradd rpmbuilder Set Topdir And Directory 1234567su - rpmbuildercat &gt; .rpmmacros &lt;&lt; &apos;EOF&apos;%_topdir /home/rpmbuilder/rpmbuildEOFmkdir -p ~/rpmbuild/&#123;BUILD,RPMS,SOURCES,SPECS,SRPMS&#125; Builder Bash Rpm Down Source File 12cd ~/rpmbuild/SOURCESwget https://ftp.gnu.org/gnu/bash/bash-4.3.30.tar.gz Change Source File 1 修改源码包(增加记录功能) cd /usr/local/src/bash-4.3.30vim bashhist.c 1234567891011121314151617181920212223242526272829303132333435363738394041#########change###############if defined (SYSLOG_HISTORY)#define SYSLOG_MAXLEN 600voidbash_syslog_history (line) const char *line;&#123; char trunc[SYSLOG_MAXLEN]; if (strlen(line) &lt; SYSLOG_MAXLEN) syslog (SYSLOG_FACILITY|SYSLOG_LEVEL, &quot;HISTORY: PID=%d UID=%d %s&quot;, getpid(), current_user.uid, line); else &#123; strncpy (trunc, line, SYSLOG_MAXLEN); trunc[SYSLOG_MAXLEN - 1] = &apos;\0&apos;; syslog (SYSLOG_FACILITY|SYSLOG_LEVEL, &quot;HISTORY (TRUNCATED): PID=%d UID=%d %s&quot;, getpid(), current_user.uid, trunc); &#125;&#125;#endif########## to ############if defined (SYSLOG_HISTORY)#define SYSLOG_MAXLEN 600voidbash_syslog_history (line) const char *line;&#123; char trunc[SYSLOG_MAXLEN]; if (strlen(line) &lt; SYSLOG_MAXLEN) syslog (SYSLOG_FACILITY|SYSLOG_LEVEL, &quot;HISTORY: PPID=%d PID=%d SID=%d UID=%d User=%s CMD=%s&quot;, getppid(), getpid(), getsid(getpid()), current_user.uid, current_user.user_name, line); else &#123; strncpy (trunc, line, SYSLOG_MAXLEN); trunc[SYSLOG_MAXLEN - 1] = &apos;\0&apos;; syslog (SYSLOG_FACILITY|SYSLOG_LEVEL, &quot;HISTORY (TRUNCATED): PPID=%d PID=%d SID=%d UID=%d User=%s %s&quot;, getppid(), getpid(), getsid(getpid()), current_user.uid, current_user.user_name, trunc); &#125;&#125;#endif vim config-top.h 12345678910111213141516####### change #########/* Define if you want each line saved to the history list in bashhist.c: bash_add_history() to be sent to syslog(). *//* #define SYSLOG_HISTORY */#if defined (SYSLOG_HISTORY)# define SYSLOG_FACILITY LOG_USER# defin####### to #############/* Define if you want each line saved to the history list in bashhist.c: bash_add_history() to be sent to syslog(). */#define SYSLOG_HISTORY #if defined (SYSLOG_HISTORY)# define SYSLOG_FACILITY LOG_USER# defin 2 重新压缩成 tar 包123cd /home/rpmbuilder/rpmbuild/SOURCESrm -rf bash-4.3.30.tar.gztar -zcvf bash-4.3.30.tar.gz bash-4.3.30 Create Spec File rpmbuild命令根据spec文件来制作合适的rpm包,spec文件一般包括以下几个处理阶段 Introduction SectionPrep SectionBuild SectionInstall SectionClean Section 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162Name: bashVersion: 4.3.30Release: 4%&#123;?dist&#125;Summary: bash with recod commandGroup: System Environment/BaseLicense: GPLv2URL: https://ftp.gnu.org/gnu/bash/bash-4.3.30.tar.gzSource0: %&#123;name&#125;-%&#123;version&#125;.tar.gzBuildRoot: %_topdir/BUILDROOT BuildRequires: gcc,make#Requires: %description编译 bash 带记录 user command %prep%setup -q%build./configuremake %&#123;?_smp_mflags&#125;%installrm -rf %&#123;buildroot&#125;make install DESTDIR=%&#123;buildroot&#125;%pre %post %&#123;__mv&#125; /bin/bash /bin/bashbak 2&gt; /dev/null %&#123;__cp&#125; -f /usr/local/bin/bash /bin/bash 2&gt; /dev/null %preun %&#123;__rm&#125; /bin/bash 2&gt; /dev/null %&#123;__mv&#125; /bin/bashbak /bin/bash 2&gt; /dev/null%postun%cleanrm -rf %&#123;buildroot&#125;%files%defattr(-,root,root,-)/usr/local/%changelog* Fri Dec 30 2015 Junun &lt;470499989@qq.com&gt; - 4.3.30-4- change * Fri Dec 29 2015 Junun &lt;470499989@qq.com&gt; - 4.3.30-3- add ln bash* Fri Dec 29 2015 Junun &lt;470499989@qq.com&gt; - 4.3.30-2- change not install * Fri Dec 29 2015 Junun &lt;470499989@qq.com&gt; - 4.3.30-1 - Initial version Build RPM 1rpmbuild -ba SPECS/bash.spec 1rpm -ivh bash-4.3.30-4.el7.centos.x86_64.rpm Bash 操作收集和分析 1通过日志收集客户端把 bash 执行命令放到日志系统, 如 splunk 或者 ELK, 分析和告警等其他操作. 方法2 定义bash脚本12345678910111213# vim /etc/profile.d/bash.shexport HISTTIMEFORMAT=&quot;[`whoami`] [`who am i 2&gt;/dev/null | awk &apos;&#123;print $NF&#125;&apos;|sed -e &apos;s/[()]//g&apos;`] &quot;export PROMPT_COMMAND=&apos;\if [ -z &quot;$OLD_PWD&quot; ];then export OLD_PWD=$PWD;fi;if [ ! -z &quot;$LAST_CMD&quot; ] &amp;&amp; [ &quot;$(history 1)&quot; != &quot;$LAST_CMD&quot; ]; then logger -t shell_cmd &quot;[$OLD_PWD]$(history 1)&quot;;fi;export LAST_CMD=&quot;$(history 1)&quot;;export OLD_PWD=$PWD;&apos;# source /etc/profile.d/bash.sh]]></content>
@@ -108,17 +119,6 @@
       </categories>
       <tags>
         <tag>Data V</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Mac小技巧]]></title>
-    <url>%2F2018%2F12%2F19%2FMac%E5%B0%8F%E6%8A%80%E5%B7%A7%2F</url>
-    <content type="text"><![CDATA[如何不间断的播放音频 $ mplayer -loop 0 和钉宫理惠一起学习五十音.mp3]]></content>
-      <categories>
-        <category>Mac</category>
-      </categories>
-      <tags>
-        <tag>Mac</tag>
       </tags>
   </entry>
   <entry>
