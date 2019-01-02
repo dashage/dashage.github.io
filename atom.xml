@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://dashage.github.io/"/>
-  <updated>2019-01-02T15:32:30.071Z</updated>
+  <updated>2019-01-02T15:33:51.740Z</updated>
   <id>https://dashage.github.io/</id>
   
   <author>
@@ -20,10 +20,10 @@
     <title>Mac小技巧</title>
     <link href="https://dashage.github.io/2019/01/02/Mac%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
     <id>https://dashage.github.io/2019/01/02/Mac小技巧/</id>
-    <published>2019-01-02T15:32:30.071Z</published>
-    <updated>2019-01-02T15:32:30.071Z</updated>
+    <published>2019-01-02T15:33:51.739Z</published>
+    <updated>2019-01-02T15:33:51.740Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>如何不间断的播放音频<br> $ mplayer -loop 0 和钉宫理惠一起学习五十音.mp3 </p><div class="row">    <embed src="https://hadoop.apache.org/docs/r1.2.1/hdfs_design.pdf" width="100%" height="550" type="application/pdf"></div>        <div id="aplayer-DSffSxIr" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">            <pre class="aplayer-lrc-content"></pre>        </div>        <script>          var ap = new APlayer({            element: document.getElementById("aplayer-DSffSxIr"),            narrow: false,            autoplay: true,            showlrc: false,            music: {              title: "少女与水手",              author: "测试",              url: "https://music.163.com/outchain/player?type=2&id=494800354&auto=1&height=66",              pic: "https://ws2.sinaimg.cn/large/006tNbRwly1fysntukzz2j30u00miq8e.jpg",              lrc: ""            }          });          window.aplayers || (window.aplayers = []);          window.aplayers.push(ap);        </script>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>如何不间断的播放音频<br> $ mplayer -loop 0 和钉宫理惠一起学习五十音.mp3 </p>        <div id="aplayer-TUxobQXW" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">            <pre class="aplayer-lrc-content"></pre>        </div>        <script>          var ap = new APlayer({            element: document.getElementById("aplayer-TUxobQXW"),            narrow: false,            autoplay: true,            showlrc: false,            music: {              title: "少女与水手",              author: "测试",              url: "https://music.163.com/outchain/player?type=2&id=494800354&auto=1&height=66",              pic: "https://ws2.sinaimg.cn/large/006tNbRwly1fysntukzz2j30u00miq8e.jpg",              lrc: ""            }          });          window.aplayers || (window.aplayers = []);          window.aplayers.push(ap);        </script>]]></content>
     
     <summary type="html">
     
