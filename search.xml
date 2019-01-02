@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[Mac小技巧]]></title>
     <url>%2F2019%2F01%2F03%2FMac%E5%B0%8F%E6%8A%80%E5%B7%A7%2F</url>
-    <content type="text"><![CDATA[如何不间断的播放音频 $ mplayer -loop 0 和钉宫理惠一起学习五十音.mp3 var ap = new APlayer({ element: document.getElementById("aplayer-kClRndeX"), narrow: false, autoplay: true, showlrc: false, music: { title: "少女与水手", author: "测试", url: "https://music.163.com/outchain/player?type=2&id=494800354", pic: "https://ws2.sinaimg.cn/large/006tNbRwly1fysntukzz2j30u00miq8e.jpg", lrc: "" } }); window.aplayers || (window.aplayers = []); window.aplayers.push(ap);]]></content>
+    <content type="text"><![CDATA[如何不间断的播放音频 $ mplayer -loop 0 和钉宫理惠一起学习五十音.mp3 var ap = new APlayer({ element: document.getElementById("aplayer-lcEGZqWB"), narrow: false, autoplay: false, showlrc: false, music: { title: "https://music.163.com/outchain/player?type=2&id=494800354", author: "undefined", url: "undefined", pic: "", lrc: "" } }); window.aplayers || (window.aplayers = []); window.aplayers.push(ap);]]></content>
       <categories>
         <category>Mac</category>
       </categories>
