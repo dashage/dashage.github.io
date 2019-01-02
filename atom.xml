@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://dashage.github.io/"/>
-  <updated>2019-01-02T22:47:18.765Z</updated>
+  <updated>2019-01-02T22:50:50.913Z</updated>
   <id>https://dashage.github.io/</id>
   
   <author>
@@ -20,10 +20,10 @@
     <title>Mac小技巧</title>
     <link href="https://dashage.github.io/2019/01/03/Mac%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
     <id>https://dashage.github.io/2019/01/03/Mac小技巧/</id>
-    <published>2019-01-02T22:47:18.764Z</published>
-    <updated>2019-01-02T22:47:18.765Z</updated>
+    <published>2019-01-02T22:50:50.912Z</published>
+    <updated>2019-01-02T22:50:50.913Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>如何不间断的播放音频<br> $ mplayer -loop 0 和钉宫理惠一起学习五十音.mp3 </p>        <div id="aplayer-lcEGZqWB" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">            <pre class="aplayer-lrc-content"></pre>        </div>        <script>          var ap = new APlayer({            element: document.getElementById("aplayer-lcEGZqWB"),            narrow: false,            autoplay: false,            showlrc: false,            music: {              title: "https://music.163.com/outchain/player?type=2&id=494800354",              author: "undefined",              url: "undefined",              pic: "",              lrc: ""            }          });          window.aplayers || (window.aplayers = []);          window.aplayers.push(ap);        </script>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>如何不间断的播放音频<br> $ mplayer -loop 0 和钉宫理惠一起学习五十音.mp3 </p>]]></content>
     
     <summary type="html">
     
