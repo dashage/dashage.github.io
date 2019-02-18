@@ -1,17 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[宾克斯的美酒]]></title>
-    <url>%2F2019%2F01%2F04%2F%E5%AE%BE%E5%85%8B%E6%96%AF%E7%9A%84%E7%BE%8E%E9%85%92%2F</url>
-    <content type="text"><![CDATA[]]></content>
-      <categories>
-        <category>音乐</category>
-      </categories>
-      <tags>
-        <tag>简谱</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[Mac小技巧]]></title>
     <url>%2F2019%2F01%2F03%2FMac%E5%B0%8F%E6%8A%80%E5%B7%A7%2F</url>
     <content type="text"><![CDATA[如何不间断的播放音频 $ mplayer -loop 0 和钉宫理惠一起学习五十音.mp3]]></content>
